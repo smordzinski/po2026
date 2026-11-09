@@ -1,5 +1,8 @@
 package agh.po.lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class CodingBatTest {
@@ -33,4 +36,19 @@ public class CodingBatTest {
         assertEquals("YoAliceAliceYo", obiekt.makeAbba("Yo", "Alice"));
         assertEquals("aaabbbbbbaaa", obiekt.makeAbba("aaa", "bbb"));
     }
+
+    @org.junit.Test
+    public void mapAB() {
+        assertEquals(Map.of("a","Hi","b","There", "ab", "HiThere"), obiekt.mapAB(new HashMap<>(Map.of("a","Hi","b","There"))));
+        assertEquals(Map.of("b","AGH","c","KRAKÓW"), obiekt.mapAB(new HashMap<>(Map.of("b","AGH", "c", "KRAKÓW"))));
+        assertEquals(Map.of("a","a", "bb", "bb", "c", "c", "ddd", "ddd"), obiekt.mapAB(new HashMap<>(Map.of("a","a", "bb", "bb", "c", "c", "ddd", "ddd"))));
+    }
+
+    @org.junit.Test
+    public void wordLen() {
+        assertEquals(Map.of("herbata", 7,"krakow", 6, "kot", 3), obiekt.wordLen(new String[]{"herbata","kot","krakow"}));
+        assertEquals(Map.of("qń", 2,"",0), obiekt.wordLen(new String[]{"qń", ""}));
+        assertEquals(Map.of("kamil", 5, "ślimak", 6, "   ", 3), obiekt.wordLen(new String[]{"kamil","ślimak","   "}));
+    }
+
 }
