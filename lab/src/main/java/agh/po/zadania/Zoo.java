@@ -15,8 +15,11 @@ public class Zoo {
             int wylosowana = (int)(Math.random()*(2-0+1)+0);
 
             switch (wylosowana){
+                case 0:
+                    animals[i] = new Dog("Reksio" + i);
+                    break;
                 case 1:
-                    animals[i]
+                    animals[i] = new
             }
         }
     }
