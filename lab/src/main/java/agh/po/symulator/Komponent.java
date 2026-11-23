@@ -16,4 +16,10 @@ public abstract class Komponent {
     public float getCena(){
         return cena;
     }
+
+    public Komponent(String nazwa, int waga, float cena){
+        this.nazwa=nazwa;
+        this.waga=waga;
+        this.cena=cena;
+    }
 }
