@@ -23,4 +23,14 @@ public class SkrzyniaBiegow extends Komponent{
             aktualnyBieg = bieg;
         }
     }
+
+    public int getAktualnyBieg() {
+        return aktualnyBieg;
+    }
+
+    public SkrzyniaBiegow(String nazwa, int waga, float cena){
+        super(nazwa, waga, cena);
+        this.aktualnyBieg = 0;
+        this.iloscBiegow = 6;
+    }
 }

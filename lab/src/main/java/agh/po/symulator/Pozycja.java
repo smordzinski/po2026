@@ -5,8 +5,8 @@ public class Pozycja {
     private double y;
 
     public void AktualizujPozycje(double deltaX, double deltaY){
-        this.x = deltaX;
-        this.y = deltaY;
+        x = deltaX;
+        y = deltaY;
     }
 
     public String getPozycja(){

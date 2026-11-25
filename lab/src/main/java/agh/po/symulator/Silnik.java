@@ -12,8 +12,9 @@ public class Silnik extends Komponent{
         obroty = 0;
     }
 
-    public Silnik(String nazwa, int waga, float cena){
+    public Silnik(String nazwa, int waga, float cena, int maxObroty){
         super(nazwa, waga, cena);
-        this.zatrzymaj();
+        this.obroty = 0;
+        this.maxObroty = maxObroty;
     }
 }

@@ -3,6 +3,10 @@ package agh.po.symulator;
 public class Sprzeglo extends Komponent{
     private boolean stanSprzegla;
 
+    public boolean getStanSprzegla() {
+        return stanSprzegla;
+    }
+
     public void wcisnij(){
         stanSprzegla = true;
     }
@@ -13,6 +17,6 @@ public class Sprzeglo extends Komponent{
 
     public Sprzeglo(String nazwa, int waga, float cena){
         super(nazwa, waga, cena);
-        this.zwolnij();
+        this.stanSprzegla = false;
     }
 }
